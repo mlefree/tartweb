@@ -70,6 +70,7 @@
             color: #c0f0d3;
             border-bottom: 1px solid #2ecc71;
         }
+
         /*
            article h1 {
                color: #ffffff;
@@ -127,7 +128,6 @@
         .wrapper {
             position: relative;
             box-shadow: 0 0 1em #333333;
-            padding-top:60px;
         }
 
         .wrapper section {
@@ -139,6 +139,7 @@
             width: 50%;
             margin: 0 auto;
             padding: 2em 0;
+            padding-top: 70px;
         }
 
         .wrapper section article p {
@@ -176,6 +177,7 @@
         .wrapper section:nth-child(4):after {
             background-image: url("https://drive.google.com/uc?id=0B4n1QzrlB220WDVkTHNLcVlzN0E");
         }
+
         /*
         https://farm4.static.flickr.com/3150/2391651759_127116344f_b.jpg
                 .wrapper section:nth-child(5):after {
@@ -186,7 +188,7 @@
                     background-image: url("https://drive.google.com/uc?id=0B4n1QzrlB220algzZ0hodlFPMDQ");
                 }*/
 
-        @media only screen and (max-width: 600px) {
+        @media only screen and (max-width: 800px) {
             .wrapper section article {
                 width: 80%;
             }
@@ -199,42 +201,9 @@
 
     <script>
         $(document).ready(function () {
-            var navOpen = false;
-            /*$('.toggle-nav').click(function() {
-             if (navOpen == false) {
-             $('.wrapper').css("position", "absolute").animate({
-             left: "30%"
-             });
-             $(this).animate({
-             left: "30%"
-             }).removeClass("entypo-menu").addClass("entypo-cancel");
-             $('nav').animate({
-             left: "0%"
-             });
-             navOpen = true;
-             } else {
-             $('.wrapper').animate({
-             left: "0%"
-             }, function() {
-             $(this).css("position", "relative");
-             });
-             $(this).animate({
-             left: "0%"
-             }).removeClass("entypo-cancel").addClass("entypo-menu");
-             $('nav').animate({
-             left: "-30%"
-             });
-             navOpen = false;
-             }
-             });
-
-            // Smooth Anchor Scrolling
-            $('a').click(function () {
-                $('html, body').animate({
-                    scrollTop: $($(this).attr('href')).offset().top
-                }, 500);
-                return false;
-            });*/
+            $('.navbar-nav>li>a').on('click', function () {
+                $('.navbar-collapse').collapse('hide');
+            });
         });
     </script>
 
@@ -244,7 +213,8 @@
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
     <div class="navbar-brand">
-        <img src="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAx8fHAPv7+wA9PT0Aenp6ANnZ2QAbGxsA4uLiAIyMjABhYWEACwsLACYmJgAvLy8Ay8vLAP///wB1dXUAqampAEpKSgAfHx8AMTExAA8PDwDW1tYATExMACoqKgCSkpIAZ2dnADw8PADz8/MA0dHRABMTEwCmpqYAR0dHAK+vrwADAwMAwcHBAJaWlgA3NzcAa2trALGxsQBSUlIAj4+PAPf39wA5OTkAFxcXAFRUVACRkZEABwcHAJqamgA7OzsAzs7OAODg4AAiIiIAtbW1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4ODg4ODg4ODg4ODg4ODg4ODgAAKxYnKQ4ODg4ODg4ODgAXHS4uChQCDg4ODg4ODg4ALgAAAAAdFBwODg4ODg4HIS4ADg4ODgoLDg4ODg4OHS4oAA4ODg4GMxkQDg4ODhIuJQAODgAABjMOMRMaDg4jChQrDg4AFxIBAg4OEyAODhQOBSILMxcMAgQvDg4ODg4JDg4OFzMONA4OMy0ODg4SMw4ODgIYAikwGw4LAw4OBg8ODg4OCDMOJh8OMjMODiQVDg4ODg4TDg4nDA4ODg4ODg4ODg4ODTMODgssDg4ODg4ODg4ODg4zAA4aKg4ODg4ODg4ODg4OHhEODg4ODgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" height="30" alt="TArt">
+        <img src="data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAx8fHAPv7+wA9PT0Aenp6ANnZ2QAbGxsA4uLiAIyMjABhYWEACwsLACYmJgAvLy8Ay8vLAP///wB1dXUAqampAEpKSgAfHx8AMTExAA8PDwDW1tYATExMACoqKgCSkpIAZ2dnADw8PADz8/MA0dHRABMTEwCmpqYAR0dHAK+vrwADAwMAwcHBAJaWlgA3NzcAa2trALGxsQBSUlIAj4+PAPf39wA5OTkAFxcXAFRUVACRkZEABwcHAJqamgA7OzsAzs7OAODg4AAiIiIAtbW1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADg4ODg4ODg4ODg4ODg4ODg4ODgAAKxYnKQ4ODg4ODg4ODgAXHS4uChQCDg4ODg4ODg4ALgAAAAAdFBwODg4ODg4HIS4ADg4ODgoLDg4ODg4OHS4oAA4ODg4GMxkQDg4ODhIuJQAODgAABjMOMRMaDg4jChQrDg4AFxIBAg4OEyAODhQOBSILMxcMAgQvDg4ODg4JDg4OFzMONA4OMy0ODg4SMw4ODgIYAikwGw4LAw4OBg8ODg4OCDMOJh8OMjMODiQVDg4ODg4TDg4nDA4ODg4ODg4ODg4ODTMODgssDg4ODg4ODg4ODg4zAA4aKg4ODg4ODg4ODg4OHhEODg4ODgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA="
+             height="30" alt="TArt">
         <!--
         https://maxcdn.icons8.com/Share/icon/Food//pie1600.png
         https://icon-icons.com/icons2/281/PNG/256/Pie-icon_30283.png
@@ -282,19 +252,24 @@
     <section id="tart" class="">
         <article>
             <h1>L'association T-ART</h1>
-            <p><img src="http://www.ctphotos.fr/Image/Flag/round/fr.png" width="20px">  T-ART (alias 'ThieumART') est une association qui a pour but de promouvoir l'Art mais aussi ce qui est
+            <p><img src="http://www.ctphotos.fr/Image/Flag/round/fr.png" width="20px"> T-ART (alias 'ThieumART') est une
+                association qui a pour but de promouvoir l'Art mais aussi ce qui est
                 utile à rendre la société plus Belle dans une perspective Humaniste & Laic. Promouvoir des artistes,
                 mais aussi des bonnes pratiques : auto-massage, méditation, dessin, peinture,
                 photographie ...<br>
             </p>
-            <p><img src="https://osai-as.com/wp-content/uploads/2016/07/United-Kingdom-Flag.png" width="20px">  T-ART (alias 'ThieumART') 's goal is promoting practices that help the world to be beautiful :)</p>
+            <p><img src="https://osai-as.com/wp-content/uploads/2016/07/United-Kingdom-Flag.png" width="20px"> T-ART
+                (alias 'ThieumART') 's goal is promoting practices that help the world to be beautiful :)</p>
         </article>
     </section>
     <section id="massage" class="">
         <article>
             <h1>Pourquoi le Massage ?</h1>
-            <p>Promouvoir le massage, pour soi en auto­massage, pour les autres avec des massages en famille - c'est se reconnecter au corps, car si on fait simple, traiter bien notre corps c’est aussi bien traiter le monde.</p>
-            <p>Nous intervenons dans les familles ou lieux publics pour initier aux bea-ba du massage et de l'auto-massage.</p>
+            <p>Promouvoir le massage, pour soi en auto­massage, pour les autres avec des massages en famille - c'est se
+                reconnecter au corps, car si on fait simple, traiter bien notre corps c’est aussi bien traiter le
+                monde.</p>
+            <p>Nous intervenons dans les familles ou lieux publics pour initier aux bea-ba du massage et de
+                l'auto-massage.</p>
             <p>... bientôt avec un renfort de l'art-théraphie !</p>
         </article>
     </section>
@@ -302,11 +277,16 @@
         <article>
             <h1>Les Artistes</h1>
             <ul>
-                <li>Amélie : De beaux tableaux pour enfant mais pas que ... <a href="http://www.peinturesdamelie.com" target="_blank">peinturesdamelie.com</a></li>
-                <li>VeVi : Photographier le Monde <a href="https://www.flickr.com/photos/vevi/albums/with/72157604150262892" target="_blank">vevi-flickr</a></li>
-                <li>Sofie Cheze : Cette peintre à le talent d'être aimé par les enfants et les plus grands ! Nous on aime .. <a href="https://www.artmajeur.com/sofie-cheze/" target="_blank">sofie-cheze</a></li>
+                <li>Amélie : De beaux tableaux pour enfant mais pas que ... <a href="http://www.peinturesdamelie.com"
+                                                                               target="_blank">peinturesdamelie.com</a>
+                </li>
+                <li>VeVi : Photographier le Monde <a
+                        href="https://www.flickr.com/photos/vevi/albums/with/72157604150262892" target="_blank">vevi-flickr</a>
+                </li>
                 <li>Thieum : Musicien affable... (bientot le lien)</li>
-                <li>Artistes, Danseurs, Performeurs ...  vous voulez nous rejoindre ? <a href="mailto:contact@thieum-art.org">contactez-nous</a>.</li>
+                <li>Artistes, Danseurs, Performeurs ... vous voulez nous rejoindre ? <a
+                        href="mailto:contact@thieum-art.org">contactez-nous</a>.
+                </li>
             </ul>
         </article>
     </section>
@@ -314,7 +294,8 @@
         <article>
             <h1>Vivant</h1>
             <p>“L’art sauvera le monde.” Fiodor Dostoïevski.</p>
-            <p>Nous organisons des concerts, exposition et conférence dans différents lieux : salles, cafés, lieux publics ou privés.</p>
+            <p>Nous organisons des concerts, exposition et conférence dans différents lieux : salles, cafés, lieux
+                publics ou privés.</p>
             <p></p>
         </article>
     </section>
@@ -325,7 +306,7 @@
                 Siren : 509 061 065<br>
                 Siret : 509 061 065 00017<br>
                 Mail : <a href="mailto:contact@thieum-art.org">contact@thieum-art.org</a>
-             </p>
+            </p>
             <p>Statuts, Journal Officiel , Comptes rendu d'Assemblée Générale :</p>
             <iframe src="https://docs.google.com/document/d/e/2PACX-1vQl6EQ722x2xlKUUQPAEBVV0PT95PRp_R1EMyuqMWwJe7bdunzekcMfqwC1J7hrz4ocWQJL40d1zK5j/pub?embedded=true"
                     width="100%" height="800px"></iframe>
